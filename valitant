@@ -1,4 +1,10 @@
 if getgenv().Aiming then return getgenv().Aiming end
+getgenv().Aiming.UseMoreHitparts = true
+getgenv().Aiming.UseNearestCursor = true
+getgenv().Aiming.AutoPrediction = false
+getgenv().Aiming.KnockedCheck = true
+getgenv().Aiming.GrabbedCheck = true
+getgenv().Aiming.Wallcheck = true
 
 -- // Services
 local Players = game:GetService("Players")
@@ -49,7 +55,7 @@ getgenv().Aiming = {
     Selected = nil,
     SelectedPart = nil,
 
-    TargetPart = {"Head", "LeftHand", "RightHand", "LeftLowerArm", "RightLowerArm", "LeftUpperArm", "RightUpperArm", "LeftFoot", "LeftLowerLeg", "UpperTorso", "LeftUpperLeg", "RightLowerLeg", "RightFoot", "LowerTorso", "RightUpperLeg"},
+    TargetPart = {"Head, HumanoidRootPart", "UpperTorso", "LowerTorso", "HumanoidRootPart", "RightFoot", "LeftFoot"},
 
     Ignored = {
         Teams = {
